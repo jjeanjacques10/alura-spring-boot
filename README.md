@@ -1,4 +1,4 @@
-# Projeto Spring Bott Java Alura
+# Projeto Spring Boot Java Alura
 
 Aplicação desenvolvida no curso [Spring Boot API REST: Construa uma API](https://cursos.alura.com.br/course/spring-boot-api-rest) da Alura
 
