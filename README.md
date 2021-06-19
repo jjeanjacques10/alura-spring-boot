@@ -13,7 +13,7 @@ Aplicação desenvolvida nos seguintes cursos da Alura:
 
 ## Documentação
 
-Você pode acessar a documentação neste **[link](/postman/Curso Alura Spring.postman_collection.json)**
+Você pode acessar a documentação neste [link](postman/Curso%20Alura%20Spring.postman_collection.json)
 
 --- 
 developed by [Jean Jacques Barros](https://github.com/jjeanjacques10)
