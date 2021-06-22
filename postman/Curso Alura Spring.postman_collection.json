@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/topicos?pagina=0&qtd=3",
+					"raw": "http://localhost:8080/topicos",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -27,12 +27,19 @@
 							"disabled": true
 						},
 						{
-							"key": "pagina",
-							"value": "0"
+							"key": "page",
+							"value": "0",
+							"disabled": true
 						},
 						{
-							"key": "qtd",
-							"value": "3"
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "titulo,desc",
+							"disabled": true
 						}
 					]
 				}
@@ -62,11 +69,21 @@
 		{
 			"name": "Cadastrar",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"Dúvida Postman\",\r\n    \"mensagem\": \"Texto da mensagem\",\r\n    \"nomeCurso\": \"Spring Boot\"\r\n}",
+					"raw": "{\r\n    \"titulo\": \"Dúvida Postma3\",\r\n    \"mensagem\": \"Texto da mensagem\",\r\n    \"nomeCurso\": \"Spring Boot\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -88,8 +105,68 @@
 			"response": []
 		},
 		{
+			"name": "Logar",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var token = jsonData.token;\r",
+							"postman.setEnvironmentVariable(\"token\", token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aluno@email.com\",\r\n    \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Atualizar",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -119,6 +196,16 @@
 		{
 			"name": "Deletar",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"body": {
