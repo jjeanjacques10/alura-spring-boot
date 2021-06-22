@@ -15,5 +15,11 @@ Aplicação desenvolvida nos seguintes cursos da Alura:
 
 Você pode acessar a documentação neste [link](postman/Curso%20Alura%20Spring.postman_collection.json)
 
+## Monitoramento com Actuator
+
+- [GET] /actuator
+- [GET] /actuator/health
+- [GET] /actuator/info
+
 --- 
 developed by [Jean Jacques Barros](https://github.com/jjeanjacques10)
