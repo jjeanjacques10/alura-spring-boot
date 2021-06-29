@@ -1,6 +1,6 @@
 # Projeto Spring Boot Java Alura - Fórum
 
-API Rest que recria o Fórum da Alura com um CRUD de tópicos de dúvidas.
+API Rest que recria o Fórum da Alura com um CRUD de tópicos de dúvidas. Banco de dados em memória (H2) utilizando Hibernate, para documentar foi utilizado o Swagger e para os testes unitários o JUnit.
 
 Aplicação desenvolvida nos seguintes cursos:
 
@@ -16,6 +16,7 @@ Aplicação desenvolvida nos seguintes cursos:
 - [Spring Boot Admin](https://github.com/codecentric/spring-boot-admin)
 - [Swagger](https://swagger.io/)
 - [SpringFox](https://springfox.github.io/springfox/)
+- [JUnit](https://junit.org/)
 
 ## Documentação
 
