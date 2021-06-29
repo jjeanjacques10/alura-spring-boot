@@ -17,6 +17,7 @@ Aplicação desenvolvida nos seguintes cursos:
 - [Swagger](https://swagger.io/)
 - [SpringFox](https://springfox.github.io/springfox/)
 - [JUnit](https://junit.org/)
+- [Docker](https://www.docker.com/)
 
 ## Documentação
 
