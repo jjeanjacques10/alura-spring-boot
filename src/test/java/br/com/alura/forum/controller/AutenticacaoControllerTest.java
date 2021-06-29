@@ -1,5 +1,6 @@
 package br.com.alura.forum.controller;
 
+import java.net.URI;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,11 +12,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
-import java.net.URI;
-import java.net.URISyntaxException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
