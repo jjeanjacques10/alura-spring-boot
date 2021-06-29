@@ -36,5 +36,9 @@ Para realizar o monitoramento foi utilizado o Actuator:
 
 Você também pode utilizar o Spring Boot Admin para ter visualizar estas informações.
 
+## Deploy
+
+A aplicação está hospedada no heroku: https://forum-alura-jj.herokuapp.com/topicos
+
 --- 
 developed by [Jean Jacques Barros](https://github.com/jjeanjacques10)
