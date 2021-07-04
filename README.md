@@ -26,7 +26,19 @@ Para visualizar os endpoints disponíveis acesse alguma das seguintes documenta�
 - [Documentação Swagger](http://localhost:8080/swagger-ui.html)
 - [Documentação Postman](postman/Curso%20Alura%20Spring.postman_collection.json)
 
-## Monitoramento a Aplicação
+## Rodando
+
+Para testar a aplicação você pode seguir os seguintes passos após clonar o repositório:
+
+``` shell
+# Gera o arquivo .jar
+mvn clean package
+
+# Executa a aplicaçõa em modo de desenvolvimento
+java -jar -Dspring.profiles.active=dev -DFORUM_DATABASE_URL=DATABASE:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 target/forum.jar 
+```
+
+## Monitoramento
 
 Para realizar o monitoramento foi utilizado o Actuator:
 
